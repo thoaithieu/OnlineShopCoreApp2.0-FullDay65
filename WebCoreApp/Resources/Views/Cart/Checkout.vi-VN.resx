@@ -117,43 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Create" xml:space="preserve">
-    <value>Create your very own account</value>
+  <data name="Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="Already" xml:space="preserve">
+    <value>Bạn đã đăng kí? Hãy đăng nhập ngay tại đây</value>
+  </data>
+  <data name="BackToCart" xml:space="preserve">
+    <value>Quay về giỏ hàng</value>
+  </data>
+  <data name="Checkout" xml:space="preserve">
+    <value>Kiểm tra đơn hàng</value>
+  </data>
+  <data name="CheckoutMethod" xml:space="preserve">
+    <value>Kiểm tra theo hình thức</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Màu sắc</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Tiếp tục</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="EasyAccess" xml:space="preserve">
+    <value>Dễ dàng xem lại lịch sử hóa đơn</value>
+  </data>
+  <data name="FastEasy" xml:space="preserve">
+    <value>Nhanh và dễ dàng hơn trong việc kiểm tra hàng </value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="GuestRegister" xml:space="preserve">
+    <value>Khách lần đầu hoặc đã là thành viên</value>
+  </data>
+  <data name="HaveError" xml:space="preserve">
+    <value>Có trục trặc về hóa đơn của bạn. Mong bạn liên lạc với chúng tôi để được khác phục.</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="Keeppurchases" xml:space="preserve">
-    <value>Keep a record of all your purchases</value>
+    <value>Trang chính</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Đăng nhập</value>
   </data>
-  <data name="Losepw" xml:space="preserve">
-    <value>Lose your password?</value>
+  <data name="Message" xml:space="preserve">
+    <value>Lời nhắn</value>
   </data>
-  <data name="MyAccount" xml:space="preserve">
-    <value>My Accout</value>
+  <data name="OrderReview" xml:space="preserve">
+    <value>Xem lại đơn hàng</value>
   </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
+  <data name="PaymentInformation" xml:space="preserve">
+    <value>Thông tin thanh toán</value>
   </data>
-  <data name="Remember" xml:space="preserve">
-    <value>Remember me</value>
+  <data name="Phone" xml:space="preserve">
+    <value>Số điện thoại</value>
   </data>
-  <data name="Sign" xml:space="preserve">
-    <value>Sign up today and you will be able to :</value>
+  <data name="PlaceOrder" xml:space="preserve">
+    <value>Đặt hàng</value>
   </data>
-  <data name="Speedcheckout" xml:space="preserve">
-    <value>Speed your way through checkout</value>
+  <data name="Product" xml:space="preserve">
+    <value>Sản phẩm</value>
   </data>
-  <data name="Trackorders" xml:space="preserve">
-    <value>Track your orders easily</value>
+  <data name="Qty" xml:space="preserve">
+    <value>Số lượng</value>
   </data>
-  <data name="Useanother" xml:space="preserve">
-    <value>Useanother service to log in.</value>
+  <data name="RegisterSaveTime" xml:space="preserve">
+    <value>Đăng kí và tiết kiệm thới gian!</value>
   </data>
-  <data name="Welcomeback" xml:space="preserve">
-    <value>Welcome back! Sign in to your account</value>
+  <data name="RegisterWithUs" xml:space="preserve">
+    <value>Đăng kí với chúng tôi để có thể tiện lợi hơn </value>
+  </data>
+  <data name="ShippingInformation" xml:space="preserve">
+    <value>Cung cấp thông tin cá nhân</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Kích cỡ</value>
+  </data>
+  <data name="Thank" xml:space="preserve">
+    <value>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ xác nhận hóa đơn của bạn sớm.</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Tổng</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Giá sản phẩm</value>
   </data>
 </root>

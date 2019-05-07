@@ -117,43 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Create" xml:space="preserve">
-    <value>Create your very own account</value>
+  <data name="AddtoCart" xml:space="preserve">
+    <value>Add to Cart</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Home </value>
   </data>
-  <data name="Keeppurchases" xml:space="preserve">
-    <value>Keep a record of all your purchases</value>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
   </data>
-  <data name="Login" xml:space="preserve">
-    <value>Login</value>
+  <data name="Sale" xml:space="preserve">
+    <value>Sale</value>
   </data>
-  <data name="Losepw" xml:space="preserve">
-    <value>Lose your password?</value>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
   </data>
-  <data name="MyAccount" xml:space="preserve">
-    <value>My Accout</value>
-  </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
-  </data>
-  <data name="Remember" xml:space="preserve">
-    <value>Remember me</value>
-  </data>
-  <data name="Sign" xml:space="preserve">
-    <value>Sign up today and you will be able to :</value>
-  </data>
-  <data name="Speedcheckout" xml:space="preserve">
-    <value>Speed your way through checkout</value>
-  </data>
-  <data name="Trackorders" xml:space="preserve">
-    <value>Track your orders easily</value>
-  </data>
-  <data name="Useanother" xml:space="preserve">
-    <value>Useanother service to log in.</value>
-  </data>
-  <data name="Welcomeback" xml:space="preserve">
-    <value>Welcome back! Sign in to your account</value>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sort By</value>
   </data>
 </root>

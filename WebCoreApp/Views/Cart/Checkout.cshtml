@@ -1,4 +1,5 @@
-﻿@model CheckoutViewModel
+﻿@inject IViewLocalizer Localizer
+@model CheckoutViewModel
 @{
     ViewData["Title"] = "Checkout";
 }
@@ -14,8 +15,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
-                    <li><strong>Checkout</strong></li>
+                    <li class="home"> <a title="Go to Home Page" href="/">@Localizer["Home"]</a><span>&raquo;</span></li>
+                    <li><strong>@Localizer["Checkout"]</strong></li>
                 </ul>
             </div>
         </div>
@@ -28,23 +29,23 @@
         <div class="row">
             <div class="col-main col-sm-12 col-xs-12">
                 <div class="page-title">
-                    <h2>Checkout</h2>
+                    <h2>@Localizer["Checkout"]</h2>
                 </div>
                 <div class="page-content checkout-page">
                     @if (ViewData["Success"] != null)
                     {
                         if ((bool)ViewData["Success"] == true)
                         {
-                            <div class="alert alert-success">
-                                Thank you for your order. We are going to confirm your order soon.
-                            </div>
+                    <div class="alert alert-success">
+                        @Localizer["Thank"]
+                    </div>
 
                         }
                         else
                         {
-                            <div class="alert alert-danger">
-                                Have an error in order progress. Please contact to administrator.
-                            </div>
+                    <div class="alert alert-danger">
+                        @Localizer["HaveError"]
+                    </div>
 
                         }
 
@@ -55,38 +56,38 @@
 
                         <form action="/checkout.html" method="post">
                             @Html.AntiForgeryToken()
-                            <h4 class="checkout-sep">1. Checkout Method</h4>
+                            <h4 class="checkout-sep">1. @Localizer["CheckoutMethod"]</h4>
                             <div class="box-border">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <h5>Checkout as a Guest or Register</h5>
-                                        <p>Register with us for future convenience:</p>
+                                        <h5>@Localizer["GuestRegister"]</h5>
+                                        <p>@Localizer["RegisterWithUs"]:</p>
                                         <br>
-                                        <h4>Register and save time!</h4>
-                                        <p>Register with us for future convenience:</p>
-                                        <p><i class="fa fa-check-circle text-primary"></i> Fast and easy check out</p>
-                                        <p><i class="fa fa-check-circle text-primary"></i> Easy access to your order history and status</p>
-                                        <button class="button" onclick="window.location.href='/register.html'"><i class="fa fa-angle-double-right"></i>&nbsp; <span>Continue</span></button>
+                                        <h4>@Localizer["RegisterSaveTime"]!</h4>
+                                        <p>@Localizer["RegisterWithUs"]:</p>
+                                        <p><i class="fa fa-check-circle text-primary"></i>@Localizer["FastEasy"]</p>
+                                        <p><i class="fa fa-check-circle text-primary"></i> @Localizer["EasyAccess"]</p>
+                                        <button class="button" onclick="window.location.href='/register.html'"><i class="fa fa-angle-double-right"></i>&nbsp; <span>@Localizer["Continue"]</span></button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <h5>Login</h5>
-                                        <p>Already registered? Please log in below:</p>
-                                        <button class="button" onclick="window.location.href='/login.html'"><i class="icon-login"></i>&nbsp; <span>Login</span></button>
+                                        <h5>@Localizer["Login"]</h5>
+                                        <p>@Localizer["Already"]:</p>
+                                        <button class="button" onclick="window.location.href='/login.html'"><i class="icon-login"></i>&nbsp; <span>@Localizer["Login"]</span></button>
                                     </div>
                                 </div>
                             </div>
 
-                            <h4 class="checkout-sep">2. Shipping Information</h4>
+                            <h4 class="checkout-sep">2. @Localizer["ShippingInformation"]</h4>
                             <div class="box-border">
                                 <ul>
                                     <li class="row">
                                         <div class="col-sm-6">
-                                            <label class="required">Full name</label>
+                                            <label class="required">@Localizer["FullName"]</label>
                                             <input class="input form-control" type="text" asp-for="CustomerName">
                                         </div>
                                         <!--/ [col] -->
                                         <div class="col-sm-6">
-                                            <label class="required">Phone</label>
+                                            <label class="required">@Localizer["Phone"]</label>
                                             <input class="input form-control" type="text" asp-for="CustomerMobile">
                                         </div>
                                     </li>
@@ -95,7 +96,7 @@
 
                                     <li class="row">
                                         <div class="col-xs-12">
-                                            <label class="required">Address</label>
+                                            <label class="required">@Localizer["Address"]</label>
                                             <input class="input form-control" type="text" asp-for="CustomerAddress">
                                         </div>
                                         <!--/ [col] -->
@@ -106,7 +107,7 @@
 
                                     <li class="row">
                                         <div class="col-sm-12">
-                                            <label class="required">Message</label>
+                                            <label class="required">@Localizer["Message"]</label>
                                             <input class="input form-control" type="text" asp-for="CustomerMessage">
                                         </div>
                                         <!--/ [col] -->
@@ -117,7 +118,7 @@
 
                                 </ul>
                             </div>
-                            <h4 class="checkout-sep">3. Payment Information</h4>
+                            <h4 class="checkout-sep">3. @Localizer["PaymentInformation"]</h4>
                             <div class="box-border">
                                 <ul>
                                     @for (int i = 0; i < Model.PaymentMethods.Count; i++)
@@ -132,17 +133,17 @@
                                 </ul>
                                 <button class="button"><i class="fa fa-angle-double-right"></i>&nbsp; <span>Continue</span></button>
                             </div>
-                            <h4 class="checkout-sep last">4. Order Review</h4>
+                            <h4 class="checkout-sep last">4. @Localizer["OrderReview"]</h4>
                             <div class="box-border">
                                 <div class="table-responsive">
                                     <table class="table table-bordered cart_summary">
                                         <thead>
                                             <tr>
-                                                <th class="cart_product">Product</th>
-                                                <th>Description</th>
-                                                <th>Unit price</th>
-                                                <th>Qty</th>
-                                                <th>Total</th>
+                                                <th class="cart_product">@Localizer["Product"]</th>
+                                                <th>@Localizer["Description"]</th>
+                                                <th>@Localizer["UnitPrice"]</th>
+                                                <th>@Localizer["Qty"]</th>
+                                                <th>@Localizer["Total"]</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -152,8 +153,8 @@
                                                     <td class="cart_product"><a href="/@item.Product.SeoAlias-p.@(item.Product.Id).html"><img src="@item.Product.Image" alt="@item.Product.Name"></a></td>
                                                     <td class="cart_description">
                                                         <p class="product-name"><a href="/@item.Product.SeoAlias-p.@(item.Product.Id).html">@item.Product.Name </a></p>
-                                                        <small><a href="#">Color : @item.Color.Name</a></small><br>
-                                                        <small><a href="#">Size : @item.Size.Name</a></small>
+                                                        <small><a href="#">@Localizer["Color"] : @item.Color.Name</a></small><br>
+                                                        <small><a href="#">@Localizer["Size"] : @item.Size.Name</a></small>
                                                     </td>
                                                     <td class="price"><span>@item.Price.ToString("N0") </span></td>
                                                     <td class="qty">@item.Quantity</td>
@@ -173,9 +174,9 @@
                                     </table>
                                 </div>
                                 <recaptcha /><span class="text-danger" id="recaptchaErrorMessage"></span>
-                                <button type="button" class="button" onclick="window.location.href='/cart.html'"><span>Back to cart</span></button>
+                                <button type="button" class="button" onclick="window.location.href='/cart.html'"><span>@Localizer["BackToCart"]</span></button>
 
-                                <button type="submit" class="button pull-right"><span>Place Order</span></button>
+                                <button type="submit" class="button pull-right"><span>@Localizer["PlaceOrder"]</span></button>
                             </div>
                         </form>
                     }

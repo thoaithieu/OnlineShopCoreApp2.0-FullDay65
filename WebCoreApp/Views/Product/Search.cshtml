@@ -1,4 +1,5 @@
-﻿@model WebCoreApp.Models.ProductViewModels.SearchResultViewModel
+﻿@inject IViewLocalizer Localizer
+@model WebCoreApp.Models.ProductViewModels.SearchResultViewModel
 @{
     ViewData["Title"] = "Search results of " + (Model.Data.CurrentPage == 1 ? Model.Keyword : Model.Keyword + " - Page " + Model.Data.CurrentPage);
     ViewData["MetaKeyword"] = "Search results of " + (Model.Data.CurrentPage == 1 ? Model.Keyword : Model.Keyword + " - Page " + Model.Data.CurrentPage);
@@ -11,8 +12,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
-                    <li><strong>Search result: @Model.Keyword</strong></li>
+                    <li class="home"> <a title="Go to Home Page" href="/">@Localizer["Home"]</a><span>&raquo;</span></li>
+                    <li><strong>@Localizer["Searchresult"]: @Model.Keyword</strong></li>
                 </ul>
             </div>
         </div>
@@ -26,19 +27,19 @@
             <div class="col-main col-sm-12 col-xs-12">
                 <div class="shop-inner">
                     <div class="page-title">
-                        <h2>Search result: @Model.Keyword</h2>
+                        <h2>@Localizer["Searchresult"]: @Model.Keyword</h2>
                     </div>
                     <div class="toolbar column">
                         <form action="/search.html" method="get">
                             <input type="hidden" name="keyword" value="@Model.Keyword" />
                             <div class="sorter">
                                 <div class="short-by">
-                                    <label>Sort By:</label>
+                                    <label>@Localizer["SortBy"]:</label>
                                     <select name="sortBy" asp-for="SortType"
                                             onchange="this.form.submit()" asp-items="Model.SortTypes"></select>
                                 </div>
                                 <div class="short-by page">
-                                    <label>Show:</label>
+                                    <label>@Localizer["Show"]:</label>
                                     <select name="pageSize" asp-for="PageSize" onchange="this.form.submit()"
                                             asp-items="Model.PageSizes"></select>
                                 </div>
@@ -54,8 +55,8 @@
                                     <div class="product-item">
                                         <div class="item-inner">
                                             <div class="product-thumbnail">
-                                                <div class="icon-sale-label sale-left">Sale</div>
-                                                <div class="icon-new-label new-right">New</div>
+                                                <div class="icon-sale-label sale-left">@Localizer["Sale"]</div>
+                                                <div class="icon-new-label new-right">@Localizer["New"]</div>
                                                 <div class="pr-img-area">
                                                     <a title="Ipsums Dolors Untra" href="@url">
                                                         <figure> <img class="first-img" src="@item.Image" alt="@item.Name"> <img class="hover-img" src="@item.Image" alt="@item.Name"></figure>
@@ -78,7 +79,7 @@
                                                             <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
                                                         </div>
                                                         <div class="pro-action">
-                                                            <button type="button" class="add-to-cart" data-id="@item.Id">><span> Add to Cart</span> </button>
+                                                            <button type="button" class="add-to-cart" data-id="@item.Id"><span>@Localizer["AddtoCart"]</span> </button>
                                                         </div>
                                                     </div>
                                                 </div>

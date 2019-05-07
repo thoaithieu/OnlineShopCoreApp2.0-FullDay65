@@ -117,43 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Create" xml:space="preserve">
-    <value>Create your very own account</value>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Already" xml:space="preserve">
+    <value>Already registered? Please log in below</value>
+  </data>
+  <data name="BackToCart" xml:space="preserve">
+    <value>Back to cart</value>
+  </data>
+  <data name="Checkout" xml:space="preserve">
+    <value>Checkout</value>
+  </data>
+  <data name="CheckoutMethod" xml:space="preserve">
+    <value>Checkout Method</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="EasyAccess" xml:space="preserve">
+    <value>Easy access to your order history and status</value>
+  </data>
+  <data name="FastEasy" xml:space="preserve">
+    <value>Fast and easy check out</value>
+  </data>
+  <data name="Full name" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="GuestRegister" xml:space="preserve">
+    <value>Checkout as a Guest or Register</value>
+  </data>
+  <data name="HaveError" xml:space="preserve">
+    <value>Have an error in order progress. Please contact to administrator.</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
-  <data name="Keeppurchases" xml:space="preserve">
-    <value>Keep a record of all your purchases</value>
-  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="Losepw" xml:space="preserve">
-    <value>Lose your password?</value>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
   </data>
-  <data name="MyAccount" xml:space="preserve">
-    <value>My Accout</value>
+  <data name="OrderReview" xml:space="preserve">
+    <value>Order Review</value>
   </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
+  <data name="PaymentInformation" xml:space="preserve">
+    <value>Payment Information</value>
   </data>
-  <data name="Remember" xml:space="preserve">
-    <value>Remember me</value>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
   </data>
-  <data name="Sign" xml:space="preserve">
-    <value>Sign up today and you will be able to :</value>
+  <data name="PlaceOrder" xml:space="preserve">
+    <value>Place Order</value>
   </data>
-  <data name="Speedcheckout" xml:space="preserve">
-    <value>Speed your way through checkout</value>
+  <data name="Product" xml:space="preserve">
+    <value>Product</value>
   </data>
-  <data name="Trackorders" xml:space="preserve">
-    <value>Track your orders easily</value>
+  <data name="Qty" xml:space="preserve">
+    <value>Qty</value>
   </data>
-  <data name="Useanother" xml:space="preserve">
-    <value>Useanother service to log in.</value>
+  <data name="RegisterSaveTime" xml:space="preserve">
+    <value>Register and save time!</value>
   </data>
-  <data name="Welcomeback" xml:space="preserve">
-    <value>Welcome back! Sign in to your account</value>
+  <data name="RegisterWithUs" xml:space="preserve">
+    <value>Register with us for future convenience</value>
+  </data>
+  <data name="ShippingInformation" xml:space="preserve">
+    <value>Shipping Information</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Thank" xml:space="preserve">
+    <value>Thank you for your order. We are going to confirm your order soon.</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Unit price</value>
   </data>
 </root>

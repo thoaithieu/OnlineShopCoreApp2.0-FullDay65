@@ -1,4 +1,5 @@
-﻿@model RegisterViewModel
+﻿@inject IViewLocalizer Localizer
+@model RegisterViewModel
 @{
     ViewData["Title"] = "Register";
 }
@@ -8,8 +9,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
-                    <li><strong>Register</strong></li>
+                    <li class="home"> <a title="Go to Home Page" href="/">@Localizer["Home"]</a><span>&raquo;</span></li>
+                    <li><strong>@Localizer["Register"]</strong></li>
                 </ul>
             </div>
         </div>
@@ -33,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label>Full Name:</label>
+                                    <label>@Localizer["FullName"]</label>
                                     <div class="input-text">
                                         <input type="text" asp-for="FullName" name="fullName" class="form-control">
                                     </div>
@@ -45,13 +46,13 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
-                                    <label>Password:</label>
+                                    <label>@Localizer["Password"]</label>
                                     <div class="input-text">
                                         <input type="password" asp-for="Password" name="password" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
-                                    <label>Confirm Password:</label>
+                                    <label>@Localizer["ConfirmPassword"]</label>
                                     <div class="input-text">
                                         <input type="password" asp-for="ConfirmPassword" name="confirmPassword" class="form-control">
                                     </div>
@@ -63,19 +64,19 @@
                                     </div>
                                 </div>
                                 @*<div class="col-xs-12">
-            <label>Avatar:</label>
-            <div class="input-text">
-                <input type="file" asp-for="Avatar" name="dob" class="form-control">
-            </div>
-        </div>*@
+                                        <label>Avatar:</label>
+                                        <div class="input-text">
+                                            <input type="file" asp-for="Avatar" name="dob" class="form-control">
+                                        </div>
+                                    </div>*@
                                 <div class="col-sm-6">
-                                    <label>Phone Number:</label>
+                                    <label>@Localizer["PhoneNumber"]</label>
                                     <div class="input-text">
                                         <input type="text" name="phoneNumber" asp-for="PhoneNumber" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label>Address:</label>
+                                    <label>@Localizer["Address"]</label>
                                     <div class="input-text">
                                         <input type="text" name="address" asp-for="Address" class="form-control">
                                     </div>
@@ -88,7 +89,7 @@
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="submit-text">
-                                        <button type="submit" class="button"><i class="fa fa-user"></i>&nbsp; <span>Register</span></button>
+                                        <button type="submit" class="button"><i class="fa fa-user"></i>&nbsp; <span>@Localizer["Register"]</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -102,5 +103,5 @@
 <!-- Main Container End -->
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
-<recaptcha-script validation-message-element-id="recaptchaErrorMessage" />
+    <recaptcha-script validation-message-element-id="recaptchaErrorMessage" />
 }

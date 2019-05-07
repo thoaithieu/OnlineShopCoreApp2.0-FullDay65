@@ -1,4 +1,5 @@
-﻿@using System.Linq
+﻿@inject IViewLocalizer Localizer
+@using System.Linq
 @model LoginViewModel
 @inject SignInManager<AppUser> SignInManager
 
@@ -12,8 +13,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
-                    <li><strong>My Account</strong></li>
+                    <li class="home"> <a title="Go to Home Page" href="/">@Localizer["Home"]</a><span>&raquo;</span></li>
+                    <li><strong>@Localizer["MyAccout"]</strong></li>
                 </ul>
             </div>
         </div>
@@ -27,24 +28,24 @@
             <div class="account-login">
                 <div class="box-authentication">
                     <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
-                        <h4>Login</h4>
+                        <h4>@Localizer["Login"]</h4>
                         <div asp-validation-summary="All" class="text-danger"></div>
-                        <p class="before-login-text">Welcome back! Sign in to your account</p>
+                        <p class="before-login-text">@Localizer["Welcomback"]</p>
                         <label asp-for="Email"></label>
                         <input type="text" asp-for="Email" class="form-control">
                         <label asp-for="Password"></label>
                         <input id="password_login" asp-for="Password" type="password" class="form-control">
-                        <p class="forgot-pass"><a asp-action="ForgotPassword">Lost your password?</a></p>
+                        <p class="forgot-pass"><a asp-action="ForgotPassword">@Localizer["Losepw"]</a></p>
                         <button type="submit" class="button">
-                            <i class="icon-lock icons"></i>&nbsp; <span>Login</span>
+                            <i class="icon-lock icons"></i>&nbsp; <span>@Localizer["Login"]</span>
                         </button>
                         <label class="inline" asp-for="RememberMe">
-                            <input asp-for="RememberMe" />
+                            <input asp-for="RememberMe" />@Localizer["Remember"]
                         </label>
                     </form>
 
                     <section>
-                        <h4>Use another service to log in.</h4>
+                        <h4>@Localizer["Useanother"]</h4>
                         <hr />
                         @{
                             var loginProviders = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -74,16 +75,16 @@
                     </section>
                 </div>
                 <div class="box-authentication">
-                    <h4>Register</h4>
-                    <p>Create your very own account</p>
+                    <h4>@Localizer["Register"]</h4>
+                    <p>@Localizer["Create"]</p>
 
-                    <button onclick="window.location.href='/register.html'" class="button"><i class="icon-user icons"></i>&nbsp; <span>Register</span></button>
+                    <button onclick="window.location.href='/register.html'" class="button"><i class="icon-user icons"></i>&nbsp; <span>@Localizer["Register"]</span></button>
                     <div class="register-benefits">
-                        <h5>Sign up today and you will be able to :</h5>
+                        <h5>@Localizer["Sign"]</h5>
                         <ul>
-                            <li>Speed your way through checkout</li>
-                            <li>Track your orders easily</li>
-                            <li>Keep a record of all your purchases</li>
+                            <li>@Localizer["Speedcheckout"]</li>
+                            <li>@Localizer["Trackorders"]</li>
+                            <li>@Localizer["Keeppurchases"]</li>
                         </ul>
                     </div>
                 </div>

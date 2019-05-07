@@ -38,10 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Views\Home\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Resources\Views\Product\Details.en-US.resx" />
   </ItemGroup>
 

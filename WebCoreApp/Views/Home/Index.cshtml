@@ -1,4 +1,5 @@
-﻿@model HomeViewModel
+﻿@inject IViewLocalizer Localizer
+@model HomeViewModel
 @{
     ViewData["Title"] = Model.Title;
     ViewData["MetaKeyword"] = Model.MetaKeyword;
@@ -24,9 +25,9 @@
                             <ul>
                                 @foreach (var slide in Model.HomeSlides)
                                 {
-                                <li data-transition='fade' data-slotamount='7' data-masterspeed='1000' data-thumb=''>
-                                    <img src='@slide.Image' data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' alt="@slide.Name" />
-                                </li>
+                                    <li data-transition='fade' data-slotamount='7' data-masterspeed='1000' data-thumb=''>
+                                        <img src='@slide.Image' data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' alt="@slide.Name" />
+                                    </li>
                                 }
                             </ul>
                             <div class="tp-bannertimer"></div>
@@ -50,10 +51,10 @@
                         <a href="#"><img src="/client-side/images/sub1.jpg" alt="HTML template"></a>
                         <div class="hover_content">
                             <div class="hover_data">
-                                <div class="title" style="color:white;"> Big Sale </div>
-                                <div class="desc-text" style="color:white;">Up to 55% off</div>
-                           
-                                <p><a href="#" class="shop-now">Get it now!</a></p>
+                                <div class="title" style="color:white;">@Localizer["BigSale"]</div>
+                                <div class="desc-text" style="color:white;">@Localizer["UpTo"]</div>
+
+                                <p><a href="#" class="shop-now">@Localizer["GetItNow"]</a></p>
                             </div>
                         </div>
                     </div>
@@ -64,18 +65,18 @@
                 <div class="jtv-best-sale-list">
                     <div class="wpb_wrapper">
                         <div class="best-title text-left">
-                            <h2>New Prodcuts</h2>
+                            <h2>@Localizer["NewProducts"]</h2>
                         </div>
                     </div>
                     <div class="slider-items-products">
                         <div id="jtv-best-sale-slider" class="product-flexslider">
                             <div class="slider-items">
-                                @foreach(var item in Model.TopSellProducts)
+                                @foreach (var item in Model.TopSellProducts)
                                 {
                                     <div class="product-item">
                                         <div class="item-inner">
                                             <div class="product-thumbnail">
-                                                <div class="icon-new-label new-left">New</div>
+                                                <div class="icon-new-label new-left">@Localizer["New"]</div>
                                                 <div class="pr-img-area">
                                                     <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">
                                                         <figure>
@@ -101,7 +102,7 @@
                                                             <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
                                                         </div>
                                                         <div class="pro-action">
-                                                            <button type="button" class="add-to-cart" data-id="@item.Id"><span> Purchase</span> </button>
+                                                            <button type="button" class="add-to-cart" data-id="@item.Id"><span>@Localizer["Purchase"]</span> </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -123,7 +124,7 @@
 <div class="container">
     <div class="home-tab">
         <div class="tab-title text-left">
-            <h2>Best selling</h2>
+            <h2>@Localizer["Bestselling"]</h2>
             <ul class="nav home-nav-tabs home-product-tabs">
                 @for (var i = 0; i < Model.HomeCategories.Count; i++)
                 {
@@ -162,7 +163,7 @@
                                         <div class="product-item">
                                             <div class="item-inner">
                                                 <div class="product-thumbnail">
-                                                    <div class="icon-new-label new-left">mới</div>
+                                                    <div class="icon-new-label new-left">@Localizer["New"]i</div>
                                                     <div class="pr-img-area">
                                                         <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">
                                                             <figure>
@@ -188,7 +189,7 @@
                                                                 <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
                                                             </div>
                                                             <div class="pro-action">
-                                                                <button type="button" data-id="@item.Id" class="add-to-cart"><span> Purchase</span> </button>
+                                                                <button type="button" data-id="@item.Id" class="add-to-cart"><span>@Localizer["Purchase"]</span> </button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -214,61 +215,11 @@
                 <div class="jtv-best-sale-list">
                     <div class="wpb_wrapper">
                         <div class="best-title text-left">
-                            <h2>Top Rate</h2>
+                            <h2>@Localizer["TopRate"]</h2>
                         </div>
                     </div>
                     <div class="slider-items-products">
                         <div id="toprate-products-slider" class="product-flexslider">
-                            <div class="slider-items">
-                                @foreach (var item in Model.HotProducts)
-                                {<ul class="products-grid">
-                                    <li class="item">
-                                        <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img  src="@item.Image"> </a> </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"> <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">@item.Name</a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
-                                                    </div>
-                                                    <div class="pro-action">
-                                                        <button type="button" class="add-to-cart" data-id="@item.Id"><i class="fa fa-shopping-cart">Purchase</i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                   
-                                </ul>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner -->
-            <div class="col-md-4 top-banner hidden-sm">
-                <div class="jtv-banner3">
-                    <div class="jtv-banner3-inner">
-                        <a href="#"><img src="/client-side/images/sub1a.jpg" alt="HTML template"></a>
-                        <div class="hover_content">
-                            <div class="hover_data bottom">
-                                <p><a style="color:black;font-weight:bold;" href="#" class="shop-now">More detail!</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4 jtv-best-sale">
-                <div class="jtv-best-sale-list">
-                    <div class="wpb_wrapper">
-                        <div class="best-title text-left">
-                            <h2>Hot Product</h2>
-                        </div>
-                    </div>
-                    <div class="slider-items-products">
-                        <div id="new-products-slider" class="product-flexslider">
                             <div class="slider-items">
                                 @foreach (var item in Model.HotProducts)
                                 {<ul class="products-grid">
@@ -297,14 +248,62 @@
                     </div>
                 </div>
             </div>
+            <!-- Banner -->
+            <div class="col-md-4 top-banner hidden-sm">
+                <div class="jtv-banner3">
+                    <div class="jtv-banner3-inner">
+                        <a href="#"><img src="/client-side/images/sub1a.jpg" alt="HTML template"></a>
+                        <div class="hover_content">
+                            <div class="hover_data bottom">
+                                <p><a style="color:black;font-weight:bold;" href="#" class="shop-now">@Localizer["Moredetail"]</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 jtv-best-sale">
+                <div class="jtv-best-sale-list">
+                    <div class="wpb_wrapper">
+                        <div class="best-title text-left">
+                            <h2>@Localizer["HotProduct"]</h2>
+                        </div>
+                    </div>
+                    <div class="slider-items-products">
+                        <div id="new-products-slider" class="product-flexslider">
+                            <div class="slider-items">
+                                @foreach (var item in Model.HotProducts)
+                                {<ul class="products-grid">
+                                        <li class="item">
+                                            <div class="item-inner">
+                                                <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img src="@item.Image"> </a> </div>
+                                                <div class="item-info">
+                                                    <div class="info-inner">
+                                                        <div class="item-title"> <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">@item.Name</a> </div>
+                                                        <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                        <div class="item-price">
+                                                            <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
+                                                        </div>
+                                                        <div class="pro-action">
+                                                            <button type="button" class="add-to-cart" data-id="@item.Id"><i class="fa fa-shopping-cart">@Localizer["Purchase"]</i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Blog -->
-
 <!-- our clients Slider -->
 @await Component.InvokeAsync("Brand")
 <!-- BANNER-AREA-START -->
-
 <!-- BANNER-AREA-END -->
