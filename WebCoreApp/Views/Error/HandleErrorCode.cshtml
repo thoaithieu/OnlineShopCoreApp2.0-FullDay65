@@ -1,11 +1,6 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "HandleErrorCode";
-}
-
-
-@{
-    ViewData["Title"] = "HandleErrorCode";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -22,17 +17,17 @@
     <title>404</title>
 
     <!-- Bootstrap CSS -->
-    <link href="~/admin-side/css/bootstrap.min.css" rel="stylesheet">
-    <!-- bootstrap theme -->
-    <link href="~/admin-side/css/bootstrap-theme.css" rel="stylesheet">
-    <!--external css-->
-    <!-- font icon -->
-    <link href="~/admin-side/css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="~/admin-side/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <!-- Custom styles -->
-    <link href="~/admin-side/css/style.css" rel="stylesheet">
-    <link href="~/admin-side/css/style-responsive.css" rel="stylesheet" />
-
+    @*<link href="~/admin-side/css/bootstrap.min.css" rel="stylesheet">
+        <!-- bootstrap theme -->
+        <link href="~/admin-side/css/bootstrap-theme.css" rel="stylesheet">
+        <!--external css-->
+        <!-- font icon -->
+        <link href="~/admin-side/css/elegant-icons-style.css" rel="stylesheet" />
+        <link href="~/admin-side/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <!-- Custom styles -->
+        <link href="~/admin-side/css/style.css" rel="stylesheet">
+        <link href="~/admin-side/css/style-responsive.css" rel="stylesheet" />*@
+    <link href="~/css/404.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -46,28 +41,47 @@
     ======================================================= -->
 </head>
 
-<body>
-    <div class="page-404">
-        <p class="text-404">404</p>
+<!--
+VIEW IN FULL SCREEN MODE
+FULL SCREEN MODE: http://salehriaz.com/404Page/404.html
+DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
+-->
 
-        <h2>Aww Snap!</h2>
-        <p>Something went wrong or that page doesn’t exist yet. <br><a href="index.html">Return Home</a></p>
-    </div>
-    <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
+<body class="bg-purple">
 
+    <div class="stars">
+
+        <div class="central-body">
+            <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px">
+            <a onclick="goBack()" class="btn-go-home">GO BACK</a>
+        </div>
+        <div class="objects">
+            <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+            <div class="earth-moon">
+                <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+                <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+            </div>
+            <div class="box_astronaut">
+                <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+            </div>
+        </div>
+        <div class="glowing_stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+
+        </div>
+
+    </div>
 
 </body>
 
 </html>
-
-
-
-
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<script src="~/js/404.js"></script>
