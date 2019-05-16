@@ -55,7 +55,6 @@
                                 <tr>
                                     <th>Account</th>
                                     <th>Name</th>
-                                    <th>Created Date</th>
                                     <th>Status</th>
                                     <th></th>
                                     <th></th>
@@ -93,7 +92,6 @@
         <tr>
             <td>{{UserName}}</td>
             <td>{{FullName}}</td>
-            <td>{{{DateCreated}}}</td>
             <td>{{{Status}}}</td>
             <td>
                 @if ((await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Update)).Succeeded)

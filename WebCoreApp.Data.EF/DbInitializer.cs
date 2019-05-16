@@ -70,7 +70,7 @@ namespace WebCoreApp.Data.EF
                     Name = "NTVA Shop",
                     Phone = "113",
                     Status = Status.Active,
-                    Website = "http://ntvashop.com",
+                    Website = "http://shopmartntva.com",
                     Lat = 10.7749563,
                     Lng = 106.6653888
                 });

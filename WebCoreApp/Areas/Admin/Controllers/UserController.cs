@@ -11,7 +11,7 @@ using WebCoreApp.Authorization;
 
 namespace WebCoreApp.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Staff")]
     public class UserController : BaseController
     {
         private readonly IUserService _userService;
